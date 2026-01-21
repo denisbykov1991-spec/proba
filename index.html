@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PROBA — бар на Митино</title>
+  <meta name="description" content="PROBA — бар/паб в Митино: крафтовое пиво, бургеры, коктейли, кальян, спорт-трансляции. Дубравная 34/29." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="PROBA">
+      <span class="brand__mark">PROBA</span>
+      <span class="brand__tag">bar • pub • vibe</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#about">О месте</a>
+      <a href="#menu">Меню</a>
+      <a href="#events">События</a>
+      <a href="#gallery">Фото</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="topbar__cta">
+      <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
+      <a class="btn btn--primary" href="#reserve">Забронировать</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mnav" id="mnav" hidden>
+    <a href="#about">О месте</a>
+    <a href="#menu">Меню</a>
+    <a href="#events">События</a>
+    <a href="#gallery">Фото</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+    <div class="mnav__buttons">
+      <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
+      <a class="btn btn--primary" href="#reserve">Забронировать</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="sticker-row">
+        <span class="sticker sticker--lime">Pet-friendly 🐾</span>
+        <span class="sticker sticker--amber">Sports on big screens</span>
+        <span class="sticker sticker--pink">Hookah lounge</span>
+      </div>
+
+      <h1 class="hero__title">
+        Бар <span class="glow">PROBA</span> в Митино —
+        <br/>рок-атмосфера, крафт, бургеры и вечерний вайб
+      </h1>
+
+      <p class="hero__subtitle">
+        Дубравная 34/29 • 2 минуты от метро Митино • Wi-Fi • летняя терраса
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#reserve">Забронировать стол</a>
+        <a class="btn btn--ghost" href="#menu">Смотреть меню</a>
+        <a class="btn btn--ghost" target="_blank" rel="noopener"
+           href="https://yandex.ru/maps/org/proba/227277883129/?utm_source=landing&utm_medium=button&utm_campaign=route">
+          Маршрут в Яндекс
+        </a>
+      </div>
+
+      <div class="hero__meta">
+        <div class="meta-card">
+          <div class="meta-card__k">Рейтинг</div>
+          <div class="meta-card__v">4.7</div>
+          <div class="meta-card__s">по отзывам гостей</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card__k">Пиво</div>
+          <div class="meta-card__v">220–490 ₽</div>
+          <div class="meta-card__s">за бокал</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card__k">Формат</div>
+          <div class="meta-card__v">бар + кухня</div>
+          <div class="meta-card__s">и кальян</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__side">
+      <div class="poster">
+        <div class="poster__top">
+          <span class="poster__badge">Tonight</span>
+          <span class="poster__date" id="today"></span>
+        </div>
+        <div class="poster__title">Rock / Indie / Hits</div>
+        <div class="poster__text">
+          Идеальный спот для встреч: напитки, закуски, трансляции и музыка без пафоса.
+        </div>
+        <div class="poster__chips">
+          <span class="chip">крафт</span>
+          <span class="chip">коктейли</span>
+          <span class="chip">бургеры</span>
+          <span class="chip">терраса</span>
+        </div>
+      </div>
+
+      <div class="info-stack">
+        <a class="info-card" href="tel:+79857769899">
+          <div class="info-card__icon">☎</div>
+          <div>
+            <div class="info-card__title">+7 985 776-98-99</div>
+            <div class="info-card__text">звонок — самый быстрый способ</div>
+          </div>
+        </a>
+
+        <a class="info-card" target="_blank" rel="noopener"
+           href="https://probabar.ru/?utm_source=landing&utm_medium=card&utm_campaign=site">
+          <div class="info-card__icon">↗</div>
+          <div>
+            <div class="info-card__title">probabar.ru</div>
+            <div class="info-card__text">меню / новости / детали</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">О месте</h2>
+        <p class="section__desc">
+          PROBA — бар/паб с кухней: приходят за атмосферой, напитками и компанией.
+          Можно с питомцами, часто включают спортивные трансляции.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card card--soft">
+          <div class="card__icon">🍺</div>
+          <h3 class="card__title">Крафт + классика</h3>
+          <p class="card__text">Пиво, коктейли, крепкие напитки — под любой вечер.</p>
+        </div>
+        <div class="card card--soft">
+          <div class="card__icon">🍔</div>
+          <h3 class="card__title">Еда без компромиссов</h3>
+          <p class="card__text">Бургеры, закуски, горячее — чтобы было «плотно».</p>
+        </div>
+        <div class="card card--soft">
+          <div class="card__icon">📺</div>
+          <h3 class="card__title">Трансляции</h3>
+          <p class="card__text">Матчи и события на экранах — бронируй стол заранее.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu highlights -->
+  <section id="menu" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Меню — популярное</h2>
+        <p class="section__desc">Быстрый выбор для первого визита (можно заменить на ваше топ-меню).</p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item__name">Бургер “Джек Дэниэлс”</div>
+          <div class="menu-item__meta">310 г</div>
+          <div class="menu-item__price">720 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Чизбургер</div>
+          <div class="menu-item__meta">280 г</div>
+          <div class="menu-item__price">630 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Кесадилья куриная</div>
+          <div class="menu-item__meta">360 г</div>
+          <div class="menu-item__price">690 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Салат Цезарь с курицей</div>
+          <div class="menu-item__meta">230 г</div>
+          <div class="menu-item__price">630 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Борщ (с бородинским, сметаной, салом)</div>
+          <div class="menu-item__meta">380 г</div>
+          <div class="menu-item__price">510 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Батат фри</div>
+          <div class="menu-item__meta">170 г</div>
+          <div class="menu-item__price">470 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Картофель фри</div>
+          <div class="menu-item__meta">120 г</div>
+          <div class="menu-item__price">260 ₽</div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item__name">Сырные палочки</div>
+          <div class="menu-item__meta">180 г</div>
+          <div class="menu-item__price">550 ₽</div>
+        </article>
+      </div>
+
+      <div class="section__foot">
+        <a class="btn btn--ghost" target="_blank" rel="noopener"
+           href="https://yandex.ru/maps/org/proba/227277883129/menu/?utm_source=landing&utm_medium=button&utm_campaign=menu">
+          Полное меню в Яндекс
+        </a>
+        <a class="btn btn--primary" href="#reserve">Бронь</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">События и форматы</h2>
+        <p class="section__desc">Шаблон блока — легко менять под ваши реальные активности.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card__title">🏁 Спорт-вечера</h3>
+          <p class="card__text">Трансляции матчей, атмосфера стадиона и столы под компании.</p>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="#reserve">Забронировать на матч</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">🎸 Музыка + бар</h3>
+          <p class="card__text">Рок/инди/хиты — так, чтобы хотелось задержаться.</p>
+          <div class="card__actions">
+            <a class="btn btn--ghost" href="#gallery">Посмотреть атмосферу</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">💨 Кальян</h3>
+          <p class="card__text">Зона релакса, когда вечер должен идти «мягче».</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">🐾 Можно с питомцами</h3>
+          <p class="card__text">Заходи с любимцем — мы pet-friendly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Фото / атмосфера</h2>
+        <p class="section__desc">
+          Плитка “как обложки альбомов”. Замени изображения на реальные фото — и будет вау.
+        </p>
+      </div>
+
+      <div class="masonry">
+        <!-- заменить src на реальные фото -->
+        <figure class="shot shot--wide"><img src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=1400&q=80" alt="Барная стойка" loading="lazy"></figure>
+        <figure class="shot"><img src="https://images.unsplash.com/photo-1514361892635-eae31f4d3c1b?auto=format&fit=crop&w=900&q=80" alt="Коктейль" loading="lazy"></figure>
+        <figure class="shot"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Еда" loading="lazy"></figure>
+        <figure class="shot shot--tall"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80" alt="Неон" loading="lazy"></figure>
+        <figure class="shot"><img src="https://images.unsplash.com/photo-1527168027773-0cc89030b270?auto=format&fit=crop&w=900&q=80" alt="Пиво" loading="lazy"></figure>
+        <figure class="shot"><img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=900&q=80" alt="Компания" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Отзывы гостей</h2>
+        <p class="section__desc">Листай — сделано как “слайды афиш”.</p>
+      </div>
+
+      <div class="reviews">
+        <button class="navbtn" id="prev" aria-label="Предыдущий отзыв">←</button>
+
+        <div class="review" id="reviewCard" role="region" aria-live="polite">
+          <!-- JS вставит -->
+        </div>
+
+        <button class="navbtn" id="next" aria-label="Следующий отзыв">→</button>
+      </div>
+
+      <div class="dots" id="dots" aria-hidden="true"></div>
+
+      <div class="section__foot">
+        <a class="btn btn--ghost" target="_blank" rel="noopener"
+           href="https://yandex.ru/maps/org/proba/227277883129/reviews/?utm_source=landing&utm_medium=button&utm_campaign=reviews">
+          Читать отзывы в Яндекс
+        </a>
+        <a class="btn btn--primary" target="_blank" rel="noopener"
+           href="https://yandex.ru/maps/org/proba/227277883129/reviews/?utm_source=landing&utm_medium=button&utm_campaign=leave_review#add-review">
+          Оставить отзыв
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserve -->
+  <section id="reserve" class="section section--alt">
+    <div class="container">
+      <div class="reserve">
+        <div>
+          <h2 class="reserve__title">Бронь стола</h2>
+          <p class="reserve__text">
+            Напиши/позвони — мы подтвердим время и посадку. Для матчей и компаний лучше заранее.
+          </p>
+
+          <div class="reserve__buttons">
+            <a class="btn btn--primary" href="tel:+79857769899">Позвонить</a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener"
+               href="https://yandex.ru/maps/org/proba/227277883129/?utm_source=landing&utm_medium=button&utm_campaign=book#bookings">
+              Открыть в Яндекс
+            </a>
+          </div>
+
+          <div class="reserve__note">
+            <span class="sticker sticker--lime">Можно с питомцами 🐾</span>
+            <span class="sticker sticker--pink">Кальян</span>
+            <span class="sticker sticker--amber">Терраса</span>
+          </div>
+        </div>
+
+        <div class="reserve__form">
+          <div class="form-head">Быстрый запрос (копируется в буфер)</div>
+          <label class="field">
+            <span>Имя</span>
+            <input id="fName" type="text" placeholder="Денис" />
+          </label>
+          <label class="field">
+            <span>Когда</span>
+            <input id="fWhen" type="text" placeholder="сегодня 20:00" />
+          </label>
+          <label class="field">
+            <span>Гостей</span>
+            <input id="fGuests" type="number" min="1" max="30" value="2" />
+          </label>
+          <label class="field">
+            <span>Комментарий</span>
+            <textarea id="fNote" rows="3" placeholder="Хотим стол потише / на матч / у окна"></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--full" id="copyMsg">Скопировать текст запроса</button>
+          <div class="hint" id="copyHint" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <footer id="contacts" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">PROBA</div>
+          <div class="footer__line">Москва, Дубравная 34/29 • м. Митино</div>
+          <div class="footer__line"><a href="tel:+79857769899">+7 985 776-98-99</a></div>
+          <div class="footer__line"><a target="_blank" rel="noopener" href="https://probabar.ru/">probabar.ru</a></div>
+
+          <div class="footer__badges">
+            <span class="chip">Wi-Fi</span>
+            <span class="chip">летняя терраса</span>
+            <span class="chip">спорт</span>
+            <span class="chip">pet-friendly</span>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe
+            title="Карта PROBA"
+            src="https://yandex.ru/map-widget/v1/?ll=37.358148%2C55.846381&z=16&l=map&pt=37.358148%2C55.846381%2Cpm2rdm"
+            frameborder="0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map__actions">
+            <a class="btn btn--ghost" target="_blank" rel="noopener"
+               href="https://yandex.ru/maps/org/proba/227277883129/?utm_source=landing&utm_medium=footer&utm_campaign=open">
+              Открыть в Яндекс
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__title">Оставить отзыв</div>
+          <p class="footer__text">Это реально помогает бару. Спасибо 🖤</p>
+          <div class="footer__reviews">
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://yandex.ru/maps/org/proba/227277883129/reviews/?utm_source=landing&utm_medium=footer&utm_campaign=leave">
+              Яндекс
+            </a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener"
+               href="https://www.google.com/search?q=PROBA%20%D0%94%D1%83%D0%B1%D1%80%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%2034%2F29%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B&utm_source=landing&utm_medium=footer&utm_campaign=leave_google">
+              Google
+            </a>
+          </div>
+
+          <div class="footer__tiny">
+            © <span id="year"></span> PROBA. Сделано в рок-эстетике, но с нормальной UX.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
