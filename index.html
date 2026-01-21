@@ -17,41 +17,45 @@
 
   <!-- Top bar -->
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="PROBA">
-      <span class="brand__mark">PROBA</span>
-      <span class="brand__tag">bar • pub • vibe</span>
-    </a>
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="PROBA">
+        <span class="brand__mark">PROBA</span>
+        <span class="brand__tag">bar • pub • vibe</span>
+      </a>
 
-    <nav class="nav">
+      <nav class="nav" aria-label="Навигация">
+        <a href="#about">О месте</a>
+        <a href="#menu">Меню</a>
+        <a href="#events">События</a>
+        <a href="#gallery">Фото</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
+        <a class="btn btn--primary" href="#reserve">Забронировать</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mnav" id="mnav" hidden>
+    <div class="mnav__inner">
       <a href="#about">О месте</a>
       <a href="#menu">Меню</a>
       <a href="#events">События</a>
       <a href="#gallery">Фото</a>
       <a href="#reviews">Отзывы</a>
       <a href="#contacts">Контакты</a>
-    </nav>
-
-    <div class="topbar__cta">
-      <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
-      <a class="btn btn--primary" href="#reserve">Забронировать</a>
-    </div>
-
-    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- Mobile menu -->
-  <div class="mnav" id="mnav" hidden>
-    <a href="#about">О месте</a>
-    <a href="#menu">Меню</a>
-    <a href="#events">События</a>
-    <a href="#gallery">Фото</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#contacts">Контакты</a>
-    <div class="mnav__buttons">
-      <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
-      <a class="btn btn--primary" href="#reserve">Забронировать</a>
+      <div class="mnav__buttons">
+        <a class="btn btn--ghost" href="tel:+79857769899">Позвонить</a>
+        <a class="btn btn--primary" href="#reserve">Забронировать</a>
+      </div>
     </div>
   </div>
 
@@ -59,86 +63,88 @@
   <main id="top" class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
 
-    <div class="hero__content">
-      <div class="sticker-row">
-        <span class="sticker sticker--lime">Pet-friendly 🐾</span>
-        <span class="sticker sticker--amber">Sports on big screens</span>
-        <span class="sticker sticker--pink">Hookah lounge</span>
-      </div>
-
-      <h1 class="hero__title">
-        Бар <span class="glow">PROBA</span> в Митино —
-        <br/>рок-атмосфера, крафт, бургеры и вечерний вайб
-      </h1>
-
-      <p class="hero__subtitle">
-        Дубравная 34/29 • 2 минуты от метро Митино • Wi-Fi • летняя терраса
-      </p>
-
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#reserve">Забронировать стол</a>
-        <a class="btn btn--ghost" href="#menu">Смотреть меню</a>
-        <a class="btn btn--ghost" target="_blank" rel="noopener"
-           href="https://yandex.ru/maps/org/proba/227277883129/?utm_source=landing&utm_medium=button&utm_campaign=route">
-          Маршрут в Яндекс
-        </a>
-      </div>
-
-      <div class="hero__meta">
-        <div class="meta-card">
-          <div class="meta-card__k">Рейтинг</div>
-          <div class="meta-card__v">4.7</div>
-          <div class="meta-card__s">по отзывам гостей</div>
+    <div class="container hero__grid">
+      <section class="hero__content">
+        <div class="sticker-row">
+          <span class="sticker sticker--lime">Pet-friendly 🐾</span>
+          <span class="sticker sticker--amber">Sports on big screens</span>
+          <span class="sticker sticker--pink">Hookah lounge</span>
         </div>
-        <div class="meta-card">
-          <div class="meta-card__k">Пиво</div>
-          <div class="meta-card__v">220–490 ₽</div>
-          <div class="meta-card__s">за бокал</div>
-        </div>
-        <div class="meta-card">
-          <div class="meta-card__k">Формат</div>
-          <div class="meta-card__v">бар + кухня</div>
-          <div class="meta-card__s">и кальян</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="hero__side">
-      <div class="poster">
-        <div class="poster__top">
-          <span class="poster__badge">Tonight</span>
-          <span class="poster__date" id="today"></span>
-        </div>
-        <div class="poster__title">Rock / Indie / Hits</div>
-        <div class="poster__text">
-          Идеальный спот для встреч: напитки, закуски, трансляции и музыка без пафоса.
-        </div>
-        <div class="poster__chips">
-          <span class="chip">крафт</span>
-          <span class="chip">коктейли</span>
-          <span class="chip">бургеры</span>
-          <span class="chip">терраса</span>
-        </div>
-      </div>
+        <h1 class="hero__title">
+          Бар <span class="glow">PROBA</span> в Митино —
+          <br />рок-атмосфера, крафт, бургеры и вечерний вайб
+        </h1>
 
-      <div class="info-stack">
-        <a class="info-card" href="tel:+79857769899">
-          <div class="info-card__icon">☎</div>
-          <div>
-            <div class="info-card__title">+7 985 776-98-99</div>
-            <div class="info-card__text">звонок — самый быстрый способ</div>
+        <p class="hero__subtitle">
+          Дубравная 34/29 • 2 минуты от метро Митино • Wi-Fi • летняя терраса
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reserve">Забронировать стол</a>
+          <a class="btn btn--ghost" href="#menu">Смотреть меню</a>
+          <a class="btn btn--ghost" target="_blank" rel="noopener"
+             href="https://yandex.ru/maps/org/proba/227277883129/?utm_source=landing&utm_medium=button&utm_campaign=route">
+            Маршрут в Яндекс
+          </a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="meta-card">
+            <div class="meta-card__k">Рейтинг</div>
+            <div class="meta-card__v">4.7</div>
+            <div class="meta-card__s">по отзывам гостей</div>
           </div>
-        </a>
-
-        <a class="info-card" target="_blank" rel="noopener"
-           href="https://probabar.ru/?utm_source=landing&utm_medium=card&utm_campaign=site">
-          <div class="info-card__icon">↗</div>
-          <div>
-            <div class="info-card__title">probabar.ru</div>
-            <div class="info-card__text">меню / новости / детали</div>
+          <div class="meta-card">
+            <div class="meta-card__k">Пиво</div>
+            <div class="meta-card__v">220–490 ₽</div>
+            <div class="meta-card__s">за бокал</div>
           </div>
-        </a>
-      </div>
+          <div class="meta-card">
+            <div class="meta-card__k">Формат</div>
+            <div class="meta-card__v">бар + кухня</div>
+            <div class="meta-card__s">и кальян</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="hero__side">
+        <div class="poster">
+          <div class="poster__top">
+            <span class="poster__badge">Tonight</span>
+            <span class="poster__date" id="today"></span>
+          </div>
+          <div class="poster__title">Rock / Indie / Hits</div>
+          <div class="poster__text">
+            Идеальный спот для встреч: напитки, закуски, трансляции и музыка без пафоса.
+          </div>
+          <div class="poster__chips">
+            <span class="chip">крафт</span>
+            <span class="chip">коктейли</span>
+            <span class="chip">бургеры</span>
+            <span class="chip">терраса</span>
+          </div>
+        </div>
+
+        <div class="info-stack">
+          <a class="info-card" href="tel:+79857769899">
+            <div class="info-card__icon">☎</div>
+            <div>
+              <div class="info-card__title">+7 985 776-98-99</div>
+              <div class="info-card__text">звонок — самый быстрый способ</div>
+            </div>
+          </a>
+
+          <a class="info-card" target="_blank" rel="noopener"
+             href="https://probabar.ru/?utm_source=landing&utm_medium=card&utm_campaign=site">
+            <div class="info-card__icon">↗</div>
+            <div>
+              <div class="info-card__title">probabar.ru</div>
+              <div class="info-card__text">меню / новости / детали</div>
+            </div>
+          </a>
+        </div>
+      </aside>
     </div>
   </main>
 
@@ -153,7 +159,7 @@
         </p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid grid-3">
         <div class="card card--soft">
           <div class="card__icon">🍺</div>
           <h3 class="card__title">Крафт + классика</h3>
@@ -242,7 +248,7 @@
         <p class="section__desc">Шаблон блока — легко менять под ваши реальные активности.</p>
       </div>
 
-      <div class="grid-2">
+      <div class="grid grid-2">
         <div class="card">
           <h3 class="card__title">🏁 Спорт-вечера</h3>
           <p class="card__text">Трансляции матчей, атмосфера стадиона и столы под компании.</p>
@@ -283,7 +289,6 @@
       </div>
 
       <div class="masonry">
-        <!-- заменить src на реальные фото -->
         <figure class="shot shot--wide"><img src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=1400&q=80" alt="Барная стойка" loading="lazy"></figure>
         <figure class="shot"><img src="https://images.unsplash.com/photo-1514361892635-eae31f4d3c1b?auto=format&fit=crop&w=900&q=80" alt="Коктейль" loading="lazy"></figure>
         <figure class="shot"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Еда" loading="lazy"></figure>
@@ -304,11 +309,7 @@
 
       <div class="reviews">
         <button class="navbtn" id="prev" aria-label="Предыдущий отзыв">←</button>
-
-        <div class="review" id="reviewCard" role="region" aria-live="polite">
-          <!-- JS вставит -->
-        </div>
-
+        <div class="review" id="reviewCard" role="region" aria-live="polite"></div>
         <button class="navbtn" id="next" aria-label="Следующий отзыв">→</button>
       </div>
 
@@ -400,7 +401,6 @@
           <iframe
             title="Карта PROBA"
             src="https://yandex.ru/map-widget/v1/?ll=37.358148%2C55.846381&z=16&l=map&pt=37.358148%2C55.846381%2Cpm2rdm"
-            frameborder="0"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
